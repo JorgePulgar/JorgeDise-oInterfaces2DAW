@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(to bottom, #09C4B6, #d6f2e7);
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+header .logo h1 {
+    margin-top: 1rem;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+    color: black;
+}
+
+header .logo p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: black;
+    text-align: center;
+}
+
+.ejemplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+hr {
+    height: 1px;
+    width: 102%;
+    margin-left: -1.1rem;
+    border-style: solid;
+    border-color: black;
+}
+
+.breadcrumbs {
+    border-top: 1px solid; 
+}
+
+.breadcrumbs a { /*Esto es para quitarle el color y el subrayado al link del párrafo "Home"*/
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.icons img {
+    margin-top: 1rem;
+    width: 37px;
+    height: 37px;
+    /*left: 95%;*/
+    top: 0;
+    z-index: 1;
+    position: fixed;
+    
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.offer, .news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around; /*Aquí funcionan bien tanto space-around como apace- evenly*/
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.offer {
+    background-image: url('../img/waves_background.jpg');
+    background-position:25em;
+    color: white;
+}
+
+.news {
+    background-image: url('../img/tree_background.jpg');
+    background-position: center;
+    color: white;
+}
+
+.offer-content h2, .news-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    
+}
+
+.offer-image img, .news-image img{
+    height: 187.5px;
+    width: 187.5px;
+    border: 5px solid white;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 12px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px;
+}
+
+footer h2 {
+    text-align: center;
+    font-family: brush script mt;
+    letter-spacing: 10px;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+    margin-left: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-section ul {
+    list-style: none;
+    text-align: center;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin: 5px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+#secreto {
+    visibility: hidden;
+    position: absolute;
+}
+
+
+/*APAISADO*/
+@media all and (min-width: 576px) {
+    header {
+        background: linear-gradient(to bottom, green, #d6f2e7);
+    }
+
+    .offer-content {
+        margin-bottom: 1em;
+    }
+
+    .offer-content h2, .news-content h2 {
+        font-size: 48px;
+        font-weight: bold;
+        letter-spacing: 8px;
+        
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: white;
+        color: black;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 15px;
+        margin-left: 30%;
+    }
+
+    .icons img {
+        left: 90%;
+    }
+}
+
+/*TABLETS*/
+@media all and (min-width: 768px){
+    header {
+        background: linear-gradient(to bottom, red, #d6f2e7);
+    }
+}
+
+/*DESKTOP*/
+@media all and (min-width: 992px){
+    header {
+        background: linear-gradient(to bottom, purple, #d6f2e7);
+    }
+}
+
+/*PANTALLAS GRANDES*/
+@media all and (min-width: 1200px){
+    header {
+        background: linear-gradient(to bottom, blue, #d6f2e7);
+    }
+}
