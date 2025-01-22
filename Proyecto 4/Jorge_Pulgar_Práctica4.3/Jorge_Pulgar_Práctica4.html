@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="Jorge_Pulgar_Práctica4.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div id="title"></div>
+            <div id="logo">
+                <picture>
+                    <source media="(min-width: 460)", srcset="img/logo1.png 5000w">
+                    <source media="(min-width: 650px)", srcset="img/logo2.png 5000w" >
+                    <img src="./img/logo1.PNG" alt="logo">
+                </picture>
+            </div>
+            <div class="menu">
+                <button>Guía</button>
+                <button>Libros</button>
+                <button>Otros</button>
+            </div>
+        </div>
+    </header>
+    <div class="red_title">
+        <audio id="cancion" controls autoplay muted loop>
+            <source src="./media/interworld - metamorphosis (sped up) [ ezmp3.cc ].mp3" type="audio/mp3">
+            <source src="./media/interworld-metamorphosis-_sped-up_-_-ezmp3.cc-_.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+        <picture>
+           <!-- <img src="img/Titulo3.PNG" alt="titulo rojo"> -->
+        </picture>
+    </div>
+
+    <section class="content">
+        <div class="horizontal_section">
+            <div class="horizontal_text">
+                <p>
+                    Vídeo →
+                </p>
+            </div>
+            <div class="video">
+                <video autoplay loop controls muted width="560" height="315">
+                    <source src="./media/How To make Liquid Core Dice! 720.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="horizontal_section">
+            <div class="horizontal_text">
+                <p>
+                    YouTube → 
+                </p>
+            </div>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MSOicpJrkoU?si=NLrWLZUAd3Bry0Sl?controls=1&autoplay=1&mute=1&playlist=MSOicpJrkoU&loop=1" 
+                title="YouTube video player" frameborder="0"  referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
