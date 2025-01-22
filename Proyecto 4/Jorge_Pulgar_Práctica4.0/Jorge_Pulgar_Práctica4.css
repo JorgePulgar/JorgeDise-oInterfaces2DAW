@@ -1,0 +1,62 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    height: 1000px;
+}
+
+header {
+    background-color: black;
+    color: #ff5b5b;
+    border-bottom: 2px solid #ff5b5b;
+    padding: 10px 0;
+    transition: 1s;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#title {
+    width: 150px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(img/Titulo2.PNG);
+}
+
+#logo {
+    width: 150px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(img/logo1.PNG);
+}
+
+.menu button {
+    background: none;
+    border: 2px solid #ff4a50;
+    color: white;
+    padding: 5px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    font-size: 1em;
+}
+
+.menu button:hover {
+    background-color: #ff4a50;
+    color: black;
+    transition: 0.3s;
+}
+
+
+
+/* Efecto para el scroll (opcional con JavaScript) */
