@@ -1,0 +1,123 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    height: 1000px;
+}
+
+header {
+    background-color: black;
+    border-bottom: 2px solid #ff5b5b;
+    padding: 10px;
+    transition: 1s;
+
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky; /*HAY QUE ARREGLAR ESTO*/
+}
+
+#title {
+    width: 150px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(img/Titulo2.PNG);
+}
+
+#logo { /*CAMBIAR A PICTURE*/
+    width: 150px;
+    height: 50px;
+}
+
+.menu button {
+    background: none;
+    border: 2px solid #ff4a50;
+    color: white;
+    padding: 5px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    font-size: 1em;
+}
+
+.menu button:hover {
+    background-color: #ff4a50;
+    color: black;
+    transition: 0.3s;
+}
+
+.red_title {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff4a50;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.horizontal_section {
+    display: flex;
+    border: 2px solid #ff4a50;
+    border-radius: 5px;
+    overflow: hidden;
+    justify-items: center;
+}
+
+.horizontal_text {
+    flex: 2;
+    padding: 20px;
+    background-color: black;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.horizontal_text:hover {
+    background-color: #ff4a50;
+    color: black;
+    transition: 0.3s;
+}
+
+.video {
+    display: flex;
+    justify-content: end;
+    align-items: end; 
+    background-color: #ddd;
+}
+
+#animated_title {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./img/Titulo2.PNG);
+    animation: title_animation 5s;
+}
+
+@keyframes title_animation {
+    from {
+        transform: translateY(-970px);
+    }
+    to {
+        background-image: url(./img/Titulo3.PNG);
+        background-color: #ff4a50;
+    }
+}
+
+
