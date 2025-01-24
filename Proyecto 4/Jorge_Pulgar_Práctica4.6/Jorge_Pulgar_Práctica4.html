@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="Jorge_Pulgar_Práctica4.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div id="title"></div>
+            <div id="logo">
+                <picture>
+                    <source srcset="img/logo1.2.png" type="image/png" media="(min-width: 1200px)" sizes="(min-width: 800px) 65vw,80vw">
+                    <source srcset="img/logo1.2.gif" type="image/gif" media="(min-width: 1200px)" sizes="(min-width: 800px) 65vw,80vw">
+                    
+                    <source srcset="img/logo2.png" type="image/png" media="(min-width: 768px)" sizes="(min-width: 800px) 65vw,80vw">
+                    <source srcset="img/logo2.gif" type="image/gif" media="(min-width: 768px)" sizes="(min-width: 800px) 65vw,80vw">
+                    
+                    <img src="img/logo1.2.png" alt="Logotipo del sitio">
+                </picture>
+            </div>
+            <div class="menu">
+                <button>Guía</button>
+                <button>Libros</button>
+                <button>Otros</button>
+            </div>
+        </div>
+    </header>
+    <div class="song">
+        <audio id="cancion" controls autoplay muted loop>
+            <source src="./media/interworld - metamorphosis (sped up) [ ezmp3.cc ].mp3" type="audio/mp3">
+            <source src="./media/interworld-metamorphosis-_sped-up_-_-ezmp3.cc-_.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <section class="content">
+        <div class="horizontal_section">
+            <div class="horizontal_text">
+                <p>
+                    Vídeo →
+                </p>
+            </div>
+            <div class="video">
+                <video autoplay loop controls muted width="560" height="315">
+                    <source src="./media/How To make Liquid Core Dice! 360.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="horizontal_section">
+            <div class="horizontal_text">
+                <p>
+                    YouTube → 
+                </p>
+            </div>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Nva6KVInuNA?si=Os5Q_G7aQ_Yimnzy?controls=1&autoplay=1&mute=1&playlist=Nva6KVInuNA&loop=1" 
+                title="YouTube video player" frameborder="0"  referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <div id="animated_title"></div>
+
+    <div id="mesmerizing_trickery">Ponme un 10 porfa :)</div>
+</body>
+</html>
