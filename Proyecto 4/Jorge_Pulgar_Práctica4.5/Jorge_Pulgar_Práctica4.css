@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    height: 1000px;
+}
+
+header {
+    background-color: black;
+    border-bottom: 2px solid #ff5b5b;
+    padding: 10px;
+    transition: 2s;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#title {
+    width: 150px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(img/Titulo2.PNG);
+}
+
+.menu button {
+    background: none;
+    border: 2px solid #ff4a50;
+    color: white;
+    padding: 5px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 2s;
+    font-size: 1em;
+}
+
+.menu button:hover {
+    background-color: #ff4a50;
+    color: black;
+    transition: 0.3s;
+}
+
+.song {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff4a50;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.horizontal_section {
+    display: flex;
+    border: 2px solid #ff4a50;
+    border-radius: 5px;
+    overflow: hidden;/
+}
+
+.horizontal_section:hover {
+    transition: transform 3s, alternate 0.3;
+    transform: scale(1.01);
+}
+
+.horizontal_text {
+    flex: 2;
+    padding: 20px;
+    background-color: black;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.horizontal_text:hover {
+    background-color: #ff4a50;
+    color: black;
+    transition: 0.3s;
+}
+
+.video {
+    display: flex;
+    justify-content: end;
+    align-items: end; 
+    background-color: #ddd;
+}
+
+#animated_title {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./img/Titulo2.PNG);
+    /*No le pongo parámetro de "animation-timing-function" porque "ease" es la que más me cuadra y es la predeterminada. Lo podría poner pero sería redundante*/
+    animation: title_animation forwards  5s; /*"forwards" es un parámetro de la subpropiedad "animation-fill-mode". Hace que el objeto de la animación se quede con los valores del último keyframe*/
+}
+
+@keyframes title_animation {
+    from {
+        transform: translateY(-970px); /*Traslada 970 píxeles en el eje vertical. Como está en negativo lo sube en vez de bajarlo*/
+    }
+
+    75% { transform: rotate(2turn); } /*La animación de rotación empieza en el último 25% de la animación y dura hasta que se termina la animación completa*/
+
+    to {
+        width: 100%;
+        height: 100px;
+        background-image: url(./img/Titulo3.PNG);
+        background-color: #ff4a50;
+    }
+}
+
+#mesmerizing_trickery {
+    color: #ff4a50;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    animation: blinker 1s linear infinite;
+    animation-delay: -0.5s;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
+
+
+
