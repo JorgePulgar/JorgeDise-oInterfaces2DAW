@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    height: 1000px;
+}
+
+header {
+    background-color: black;
+    border-bottom: 2px solid #ff5b5b;
+    padding: 10px;
+    transition: 2s;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#title {
+    width: 150px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(img/Titulo2.PNG);
+}
+
+
+
+.menu button {
+    background: none;
+    border: 2px solid #ff4a50;
+    color: white;
+    padding: 5px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 3s, transform 0.3s, background-color 0.3s, color 0.3s; /*Los tres primeros segundos son para que al entrar en la página los botones hagan una pequeña transición*/
+    font-size: 1em;
+}
+
+.menu button:hover {
+    background-color: #ff4a50;
+    color: black;
+    transform: scale(1.1);
+}
+
+.song {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff4a50;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.horizontal_section {
+    width: 100%; 
+    height: auto;
+    display: flex;
+    border: 2px solid #ff4a50;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: width 2s, height 4s, transform 1s; /*Height no hace falta, lo explico más adelante*/
+}
+
+.horizontal_section:hover {
+    /*
+    Aquí tengo varias cosas aunque no tengan mucho sentido para probar distintas cosas
+    Para que la transición funcione bien, la clase o el id originales tienen que tener lo que se 
+    quiere cambiar definido.
+    En este caso, aunque en la transición tenga puesto que la altura tarde 4 segundos, el cambio será
+    instantaneo porque en la sección está definida como "auto". Para comprobarlo descomenta la altura,
+    comenta la transformación y cambia la altura en la sección. 
+    */
+    transform: scale(0.8); 
+    width: 900px;
+    /* height: 100px; */
+}
+
+.horizontal_text {
+    flex: 2;
+    padding: 20px;
+    background-color: black;
+    color: #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.horizontal_text:hover {
+    background-color: #ff4a50;
+    color: black;  
+}
+
+.video {
+    display: flex;
+    justify-content: end;
+    align-items: end; 
+    background-color: #ddd;
+}
+
+#animated_title {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./img/Titulo2.PNG);
+    /*No le pongo parámetro de "animation-timing-function" porque "ease" es la que más me cuadra y es la predeterminada. Lo podría poner pero sería redundante*/
+    animation: title_animation forwards  5s; /*"forwards" es un parámetro de la subpropiedad "animation-fill-mode". Hace que el objeto de la animación se quede con los valores del último keyframe*/
+}
+
+@keyframes title_animation {
+    from {
+        transform: translateY(-970px); /*Traslada 970 píxeles en el eje vertical. Como está en negativo lo sube en vez de bajarlo*/
+    }
+
+    75% { transform: rotate(2turn); } /*La animación de rotación empieza en el último 25% de la animación y dura hasta que se termina la animación completa*/
+
+    to {
+        width: 100%;
+        height: 100px;
+        background-image: url(./img/Titulo3.PNG);
+        background-color: #ff4a50; /*Este color lo cambio para que coincida con la imagen*/
+    }
+}
+
+#mesmerizing_trickery {
+    color: #ff4a50;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    animation: blinker 1s linear infinite;
+    animation-delay: -0.5s;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
+
+
+
