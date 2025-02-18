@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Pop</title>
+    <link href="JorgePulgarPacho_Practica5.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="start-screen">
+        <h1>Bubble Pop</h1>
+        <button onclick="tutorial()">Desplegar Tutorial</button>
+        <button onclick="startGame(false)">Iniciar Modo Fácil</button>
+        <button onclick="startGame(true)">Iniciar Modo Dificil</button>
+    </div>
+    
+    
+    <p id="score">Puntuación: 0</p>
+    <div id="game-container"></div>
+    <div id="tutorial-container">
+        <p>Haz clic en las burbujas antes de que desaparezcan.</p>
+        <p>Si clicas en una burbuja roja perderás.</p>
+        <p>En modo fácil necesitarás clicar más de la mitad de las burbujas azules para ganar.</p>
+        <p>En el modo dificil necesitarás clicar todas las burbujas azules para ganar y aparecerán más burbujas rojas</p>
+    </div>
+    <p id="message"></p>
+    <div id="loading-screen" style="display: none;">
+        <p>Cargando...</p>
+    </div>
+    <div class="menu-background">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <script src="JorgePulgarPacho_Practica5.js"></script>
+</body>
+</html>
